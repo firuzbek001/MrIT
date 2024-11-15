@@ -14,5 +14,5 @@ urlpatterns = [
     path('logout/', ItemLogout.as_view(), name='logout'),
     path('item/<int:pk>/', ItemDetailView.as_view(), name='item-detail'),
     path('item/<int:pk>/edit/', ItemUpdateView.as_view(), name='item-edit'),
-    path('item-delete/<int:pk>/', ItemDeleteView.as_view(), name='item-delete'),
+    path('item-delete/<int:pk>/', ItemDeleteView.as_view(), name='item-delete')
 ]

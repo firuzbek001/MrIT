@@ -1,13 +1,11 @@
-from modeltranslation.translator import translator, TranslationOptions
+from modeltranslation.translator import register, translator, TranslationOptions
 from .models import Item, TranslatedItem
 
 
-@translator(Item)
+@register(Item)
 class ItemTranslationOptions(TranslationOptions):
     fields = ('name', 'description',)
-    pass
 
-@translator(TranslatedItem)
+@register(TranslatedItem)
 class TranslatedItemTranslationOptions(TranslationOptions):
     fields = ('name', 'description',)
-    pass

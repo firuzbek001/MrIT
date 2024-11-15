@@ -70,6 +70,7 @@
                             </li>
                          <form action="{% url 'set_language' %}" method="post" id="languageForm">{% csrf_token %}
                    <input name="next" type="hidden" value="{{ redirect_to }}">
+{#                         <a class="nav-link" href="{% url 'item-delete' pk=item.pk %}">Delete</a>#}
 
                    <select style="margin-top:10px; background:transparent; color:white;" name="language" onchange="document.getElementById('languageForm').submit();">
                        {% get_current_language as LANGUAGE_CODE %}
